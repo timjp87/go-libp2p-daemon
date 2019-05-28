@@ -4,7 +4,7 @@
 static ERL_NIF_TERM start_daemon_nif(ErlNifEnv *env, int argc, const ERL_NIF_TERM argv[])
 {
     char buf[1024];
-    if (!enif_get_string(env, argv[0], buf, sizeof(buf), ERL_NIF_LATIN1))
+    if (enif_get_string(env, argv[0], buf, sizeof(buf), ERL_NIF_LATIN1) < 1)
     {
         return enif_make_badarg(env);
     }
