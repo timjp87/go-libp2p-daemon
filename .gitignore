@@ -19,3 +19,4 @@
 p2pclient/java/libp2pd.h
 p2pclient/java/p2pd.h
 *.DS_Store
+.vscode
